@@ -40,9 +40,9 @@
 
     Ext.onReady(function(){
       setTimeout(() => {
-          Ext.get('testpanel').hide();
+          Ext.get('testtestpanel').hide();
           return setTimeout(() => {
-            Ext.get('testpanel').show();
+            Ext.get('testtestpanel').show();
             Ext.select('span .selects').elements.forEach((element, index) => {
               element.style = 'color: red;';
               if(index === 2){
@@ -64,7 +64,7 @@
       Ext.create('Ext.Button', {
         margin:'10 0 0 30',
         text: 'Жми здесь',
-        renderTo: Ext.get('testpanel'),
+        renderTo: Ext.get('testtestpanel'),
         listeners: {
             click: function(){
                 alert('Hello World');
@@ -78,16 +78,16 @@
         if(e.getTarget('li.buy')) {
             alert('Покупка');
         }
-        else if(e.getTarget('li.sell')) {
+        else if(e.getTarget('.sell')) {
             alert('Продажа');
         }
-        else if(e.getTarget('li.exit')) {
+        else if(e.getTarget('.exit')) {
             alert('выход');
         }
     }, this, {
         delegate: 'li'
-    });
-});
+    });});
+
     </script>
 </head>
 <body></body>
